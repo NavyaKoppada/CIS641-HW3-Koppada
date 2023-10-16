@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignment 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+  .goback .btn  {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 38px;
+  background: linear-gradient(90deg, #6616d0, #ac34e7);
+  border-radius: 45px;
+  margin: 105x;
+  font-size: 20px;
+  font-weight: 50;
+  text-decoration: none;
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  }
+
+  .goback .btn .overlay{
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  animation: blink 0.5s linear;
+  }
+
+ .fitness-section .button {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 12px 38px;
+  background: linear-gradient(90deg, #6616d0, #ac34e7);
+  border-radius: 45px;
+  margin: 105x;
+  font-size: 20px;
+  font-weight: 50;
+  text-decoration: none;
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  }
+
+.fitness-section .button .overlay{
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 0;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  animation: blink 0.5s linear;
+}
+
+@keyframes blink {
+  0%{
+    height: 0px;
+    width: 0px;
+    opacity: 0.3;
+  }
+  100%{
+    height: 400px;
+    width: 400px;
+    opacity: 0;
+  }
+}
+
+    h1 {
+      position: static;
+      text-align: center;
+      color: rgb(243, 240, 240);
+      font-family: verdana;
+      font-size: 100%;
+    }
+
+    p {
+      color: rgb(241, 234, 234);
+      text-align: center;
+      font-family: courier;
+      font-size: 100%;
+    }
+
+    .back {
+      color: rgb(224, 213, 213);
+      text-align: center;
+      margin-top: 2%;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    h2 {
+      position: static;
+      text-align: center;
+      color: rgb(30, 0, 255);
+      font-family: verdana;
+      font-size: 150%;
+    }
+
+    h4 {
+      position: static;
+      text-align: center;
+      color: #D4AC0D;
+      font-family: verdana;
+      font-size: 150%;
+    }
+
+    .image {
+      width: auto;
+      max-height: 50%;
+      margin-right: 10px;
+      padding: 0%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+    
+
+    #section1 {
+      height: 600px;
+      background-color: pink;
+    }
+
+    #section2 {
+      height: 600px;
+      background-color: yellow;
+    }
+
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+  body {
+  margin-bottom: 60px; 
+  background-image: url('./images/dark.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  margin: 0; 
+  padding: 0;
+  }
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container.text-center {
+      margin-bottom: 20px;
+    }
+
+    body {
+      margin-bottom: 0;
+    }
+
+
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  z-index: 1000;
+}
+
+    .navbar-brand {
+      color: white;
+      display: flex;
+      align-items: center;
+      margin-right: 500px; 
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: auto;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .navbar-brand span {
+      font-size: 24px;
+      white-space: nowrap;
+    }
+
+    .navbar-nav > li > a:hover
+    {
+      color: rgb(30, 28, 28) !important;
+    }
+
+    .navbar-nav > li.active > a
+    {
+      color: rgb(233, 220, 220)
+    }
+
+    .navyakoppada {
+      color: white; 
+      font-size: 24px; 
+      white-space: nowrap; 
+    }
+
+    .container-columns {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+
+    .column {
+      width: 48%; 
+    }
+
+    .intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 65px; 
+    }
+
+
+    .intro-text {
+      text-align: center;
+    }
+
+
+    .intro-image img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    html, body {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .wrapper {
+      text-align: center;
+    }
+
+    .fitness-section {
+      display: inline-block;
+      vertical-align: top;
+      padding: 10px;
+      margin-right: -4px;
+      width: 300px;
+    }
+
+    h1 {
+      position: static;
+      text-align: center;
+      color: rgb(237, 228, 228);
+      font-family: verdana;
+      font-size: 100%;
+    }
+
+    .points {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      height: 150px;
+      overflow: hidden; 
+      max-height: 0; 
+      transition: max-height 0.3s ease-in-out; 
+    }
+
+    .points.open {
+      max-height: 150px; 
+    }
+
+    .points li {
+      display: block;
+      text-align: center; 
+      font-size: 18px; 
+      color: #e1dbdb; 
+      padding: 5px 0; 
+      border: none !important; 
+    }
+
+    #term-project {
+    background-image: url('images/blue.jpeg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;
+    text-align: left;
+    color: #e9d2d2; 
+    }
+    #term-project h3 {
+      color: #333; 
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    #term-project p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      max-width: 200px; 
+      margin: 20px auto;
+    }
+
+    .social-button {
+      background-color: #007BFF; 
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .social-buttons {
+        max-width: 150px; 
+      }
+
+      .social-button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+      }
+    }
+
+  
+  @media (max-width: 768px) {
+
+  .imgWrapper {
+    padding: 20px 20px 0 20px; 
+  }
+
+  .contentWrapper {
+    padding: 20px;
+    margin: 0; 
+  }
+
+  .content {
+    text-align: center; 
+  }
+}
+
+  
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contentWrapper {
+      flex: 1;
+      padding: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 100%;
+      width: 80%;
+      height: auto;
+      overflow: auto;
+      margin-left: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+    }
+
+    .imgWrapper {
+      width: 40%;
+      padding: 20px;
+      margin-bottom: 20px; 
+    }
+
+    .content {
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .imgWrapper img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 50%;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0;
+      padding-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      overflow: auto;
+      max-height: 300px;
+      color: #333;
+    }
+
+.content h2 {
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.content ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content strong {
+  font-weight: bold;
+}
+.zoom-image {
+  transition: transform 0.2s; 
+}
+
+.zoom-image:hover {
+  transform: scale(1.1);
+}
+
+.zoom-button {
+  transition: transform 0.2s; 
+}
+
+.zoom-button:hover {
+  transform: scale(1.1); 
+}
+.footer p{
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+  <div class="background-image"></div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#home">
+          <img src="./images/profile.png" alt="Profile" data-toggle="tooltip" title="No Profile picture">
+          <span class="navyakoppada" data-toggle="tooltip" title="Hello, I'm Navya Koppada">Navya Koppada</span>
+        </a>
+     
+      <ul class="nav navbar-nav ">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#about">About Me</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToTermProject()">Project</a></li>
+
+      </ul>
+    </div>
+    </div>
+  </nav>
+  <div class="intro-container" id="home"> 
+    <div class="intro-text">
+      <h1> Hi, I'm Navya Koppada &#128512;</h1>
+    </div>
+    <div class="intro-image">
+      <img src="./images/girl.png" width="350" height="225">
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="fitness-section">
+      <h2><a href="#personal-interests" class="button zoom-button">Personal Interests</a></h2>
+      <ul id="personal-interests" class="points">
+        <li>Playing carrom board.</li>
+        <li>Watching feel-good movies.</li>
+        <li>Spending time with family or friends.</li>
+      </ul>
+    </div>
+
+    <div class="fitness-section two">
+      <h2><a href="#technical-interests" class="button zoom-button two">Technical Interests</a></h2>
+      <ul id="technical-interests" class="points">
+        <li>JavaScript.</li>
+        <li>MySQL.</li>
+        <li>HTML, CSS.</li>
+        <li>Java.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container text-center">
+    <div class="goback ">
+    <a href="https://vamsivura.github.io/GVSU-CIS641-Team-ACS/" class="btn zoom-button">Go back to TeamProject</a></div>
+  </div>
+
+  <div class="social-buttons">
+    <a href="https://www.twitter.com" target="_blank" class="social-button">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-button">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.github.com" target="_blank" class="social-button">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  <section id="term-project">
+    <div class="container">
+      <div class="contentWrapper">
+        <div class="imgWrapper">
+          <img src="images/doctor.jpeg" alt="" class="zoom-image" style="width: 100%; max-height: 100%; object-fit: cover;">
+
+        </div>
+        <div class="content">
+          <span class="textWrapper">
+          </span>
+          <h2><b>Online Doctor Appointment</b></h2>
+          <p>
+            <strong>
+            My term project stands out as an excellent example of a thorough effort that used the power of intense software development to address urgent problems in the healthcare system. This project was carefully planned to address the problems and difficulties that hospital administration is currently dealing with. The culmination of this project was the development of a fully functional application that has the potential to completely transform hospital operations, resulting in significant cost savings and raising patient happiness to new heights.
+          </strong>
+          </p>
+          <p>
+            <strong>
+            This initiative demonstrates both my technical competence and my capacity for identifying and addressing pressing problems with the healthcare system. It emphasizes my constant commitment to producing real and significant results.The primary objective of this project was the careful creation of a sophisticated software system that was carefully designed to expedite and optimise hospital administration procedures. It provides a comprehensive solution that includes making appointments, managing patient records, allocating resources, and a host of other features, leading to increased operational effectiveness and improved patient care.In essence, this project went beyond simple technological advancement. It demonstrated a thorough understanding of the complex healthcare field along with the ability to turn that information into workable solutions. It exemplifies my persistent dedication to making a significant impact on the healthcare industry by successfully addressing pressing problems with technology-driven solutions.
+          </strong>
+          </p>
+          <p>
+            <strong>
+            I really anticipate delving into a thorough discussion of the accomplishments and knowledge gained over this effort. Moreover, I am excited about the possibility of utilizing the information and experience gained from this endeavour to advance my professional development and significantly contribute to the success of our organization, especially when it comes to addressing the pressing issues in the healthcare industry.
+            </strong>
+          </p>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer">
+    <p>&copy; 2023 Navya Koppada. All rights reserved.</p>
+
+</footer>
+</body>
+</html>
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const zoomableImage = document.querySelector(".zoomable-image");
+
+  if (zoomableImage) {
+    zoomableImage.addEventListener("click", function () {
+      this.classList.toggle("zoomed"); 
+    });
+  }
+});
+
+  $(document).ready(function () {
+    $('ul.nav.navbar-nav li').click(function () {
+      $('li').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+
+    $(document).ready(function() {
+      $(".button").click(function(event) {
+        event.preventDefault();
+        var targetSection = $(this).attr("href");
+        $(targetSection).toggleClass("open");
+      });
+    });
+
+    function scrollToTermProject() {
+    var termProjectSection = document.getElementById("term-project");
+    if (termProjectSection) {
+      termProjectSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+    let buttons = document.querySelectorAll(".button");
+    for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", (e)=>{
+      e.preventDefault(); 
+      let overlay = document.createElement('span'); 
+      overlay.classList.add("overlay");
+      e.target.appendChild(overlay); 
+      let xValue = e.clientX - e.target.offsetLeft; 
+      let yValue = e.clientY - e.target.offsetTop; 
+       overlay.style.left = xValue + "px"; 
+       overlay.style.top = yValue + "px"; 
+  });
+  }
+
+  </script>
